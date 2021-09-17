@@ -1,1 +1,31 @@
-GET http://localhost:3000/todos/?status=TO%20dO
+GET http://localhost:3000/todos/
+
+####
+
+GET http://localhost:3000/todos/1/
+###
+
+GET http://localhost:3000/agenda/?date=2021-1-12
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 7,
+  "todo": "I completed my assignment",
+  "priority": "MEDIUM",
+  "status": "DONE",
+  "category": "HOME",
+  "dueDate": "2021-08-17"
+}
+###
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+{
+  "dueDate": "2021-2-25"
+}
+
+###
+DELETE http://localhost:3000/todos/2/
